@@ -5,8 +5,8 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 console.log(import.meta.env.VITE_APP_ID);
-const mySecret = process.env.MY_SECRET;
-const mySecret1 = process.env.VITE_APP_ID;
+const mySecret = import.meta.env.VITE_MY_SECRET;
+const mySecret1 = process.env.VITE_MY_SECRET;
 console.log(mySecret);
 console.log(mySecret1);
 
