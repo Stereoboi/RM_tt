@@ -2,7 +2,7 @@
 
 # Description:
 
-Welcome to the Rick and Morty Character Collection app! This app allows you to explore the amazing world of Rick and Morty and create your own personal collection of your favorite characters. You can browse through the list of characters, view their details, and add them to your collection. You can also search for specific characters by name or filter them by species, gender, or status.
+Welcome to the Rick and Morty Character Collection app! This app allows you to explore the amazing world of Rick and Morty and create your own personal collection of your favorite characters. You can browse through the list of characters, view their details, and add them to your collection. You can also search for specific characters by name or filter them.
 
 To use the app, you need to sign in with your Google or Facebook account. This will allow you to save your collection and access it from any device. You can also share your collection with your friends on social media and see who else shares your love for Rick and Morty characters.
 
