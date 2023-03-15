@@ -9,6 +9,8 @@ import {
   ItemDescriptionText,
   InfoWrapper,
 } from "./CharacterInfo.styled";
+import PropTypes from "prop-types";
+
 export const CharacterInfo = ({
   name,
   status,
@@ -54,4 +56,14 @@ export const CharacterInfo = ({
       </InfoWrapper>
     </Wrapper>
   );
+};
+
+CharacterInfo.propTypes = {
+  name: PropTypes.string,
+  status: PropTypes.string,
+  species: PropTypes.string,
+  type: PropTypes.string,
+  gender: PropTypes.string,
+  image: PropTypes.string,
+  origin: PropTypes.string,
 };

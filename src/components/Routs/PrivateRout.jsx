@@ -8,6 +8,5 @@ export const PrivateRoute = ({
 }) => {
   const [user, loading] = useAuthState(auth);
   const result = localStorage.getItem("USER_KEY");
-
   return !result ? <Navigate to={redirectTo} /> : Component;
 };

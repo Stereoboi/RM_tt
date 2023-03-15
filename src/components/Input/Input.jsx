@@ -2,6 +2,7 @@ import { InputField, Form, Button, InputWrapper } from "./Input.styled";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
+import PropTypes from "prop-types";
 
 export const Input = ({ currentPage }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,4 +31,8 @@ export const Input = ({ currentPage }) => {
       </InputWrapper>
     </Form>
   );
+};
+
+Input.propTypes = {
+  currentPage: PropTypes.number,
 };

@@ -3,7 +3,7 @@ import { BsHeart } from "react-icons/bs";
 import { BsHeartbreak } from "react-icons/bs";
 import { useState } from "react";
 import { toast } from "react-toastify";
-
+import PropTypes from "prop-types";
 import {
   List,
   CardItem,
@@ -76,4 +76,12 @@ export const Card = ({ id, name, species, image, deleteCard, removed }) => {
       </CardLink>
     </CardItem>
   );
+};
+
+Card.propTypes = {
+  name: PropTypes.string,
+  species: PropTypes.string,
+  image: PropTypes.string,
+  deleteCard: PropTypes.func,
+  removed: PropTypes.bool,
 };

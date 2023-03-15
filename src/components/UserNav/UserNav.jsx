@@ -11,8 +11,8 @@ import {
 export const UserNav = () => {
   const [user, loading] = useAuthState(auth);
   const logOut = () => {
-    auth.signOut();
     localStorage.removeItem("USER_KEY");
+    auth.signOut();
   };
   return (
     <UserWrapper>

@@ -27,8 +27,8 @@ export default function PaginationButtons({ handleClick, page, totalPages }) {
   );
 }
 
-// PaginationButtons.propTypes = {
-//   handleClick: PropTypes.func,
-//   page: PropTypes.number,
-//   totalPages: PropTypes.number,
-// };
+PaginationButtons.propTypes = {
+  handleClick: PropTypes.func,
+  page: PropTypes.number,
+  totalPages: PropTypes.number,
+};

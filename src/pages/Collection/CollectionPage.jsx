@@ -6,13 +6,17 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { CardList } from "../../components/CardList/CardList.jsx";
 import { MainContainer } from "../Home/HomePage.styled.js";
 import { CollectionBanner } from "../../components/CollectionBanner/CollectionBanner.jsx";
-import { toast } from "react-toastify";
+import { Triangle } from "react-loader-spinner";
+import { LoaderWrapper } from "./CollectionPage.styled.js";
 
 const CollectionPage = () => {
   const [user, loading] = useAuthState(auth);
   const [userCollection, setUserCollection] = useState([]);
   const [removed, setRemoved] = useState(true);
+  const [status, setStatus] = useState("idle");
+
   useEffect(() => {
+    setStatus("pending");
     const userKey = localStorage.getItem("USER_KEY");
     const FireBase = async () => {
       const querySnapshot = await getDocs(collection(db, userKey || user.uid));
@@ -23,6 +27,7 @@ const CollectionPage = () => {
         arr.push({ ...doc.data(), id: documentReference.id });
       });
       setUserCollection(arr);
+      arr.length === 0 ? setStatus("rejected") : setStatus("resolved");
     };
     FireBase();
   }, []);
@@ -39,19 +44,57 @@ const CollectionPage = () => {
     }
   };
 
-  return (
-    <MainContainer>
-      {userCollection.length === 0 ? (
-        <CollectionBanner />
-      ) : (
+  if (status === "pending") {
+    return (
+      <LoaderWrapper>
+        <Triangle
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="triangle-loading"
+          wrapperStyle={{}}
+          wrapperClassName=""
+          visible={true}
+        />
+      </LoaderWrapper>
+      // <LoaderWrapper>
+      //   <CircularProgress color="success" />
+      // </LoaderWrapper>
+    );
+  }
+
+  if (status === "resolved") {
+    return (
+      <MainContainer>
         <CardList
           characterList={userCollection}
           deleteCard={deleteCard}
           removed={removed}
         />
-      )}
-    </MainContainer>
-  );
+      </MainContainer>
+    );
+  }
+  if (status === "rejected") {
+    return (
+      <MainContainer>
+        <CollectionBanner />
+      </MainContainer>
+    );
+  }
+
+  // return (
+  // <MainContainer>
+  //   {userCollection.length === 0 ? (
+  //     <CollectionBanner />
+  //   ) : (
+  //     <CardList
+  //       characterList={userCollection}
+  //       deleteCard={deleteCard}
+  //       removed={removed}
+  //     />
+  //   )}
+  // </MainContainer>
+  // );
 };
 
 export default CollectionPage;
