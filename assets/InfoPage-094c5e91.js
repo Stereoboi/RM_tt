@@ -1,10 +1,10 @@
-import{s as n,a as e,j as t,N as I,r as m,g as k,h as T,k as j}from"./index-51cb5fa9.js";import{a as v,b as z}from"./api-763a5ba7.js";const L=n.div`
+import{s as n,a as e,j as t,N as T,r as m,g as j,h as v,k as z}from"./index-3bc16952.js";import{p as i}from"./index-4d501b15.js";import{a as L,b as B}from"./api-70e61b21.js";const R=n.div`
   padding: 64px 25px 85px 25px;
   @media screen and (min-width: 768px) {
     padding-top: 76px;
     padding-bottom: 142px;
   }
-`,B=n.img`
+`,C=n.img`
   margin: 0 auto;
   width: 150px;
   height: 150px;
@@ -14,7 +14,7 @@ import{s as n,a as e,j as t,N as I,r as m,g as k,h as T,k as j}from"./index-51cb
     width: 300px;
     height: 300px;
   }
-`,R=n.p`
+`,E=n.p`
   margin-top: 34px;
   margin-bottom: 34px;
   font-family: Roboto;
@@ -30,7 +30,7 @@ import{s as n,a as e,j as t,N as I,r as m,g as k,h as T,k as j}from"./index-51cb
     font-size: 48px;
     line-height: 48px;
   }
-`,C=n.p`
+`,F=n.p`
   margin-bottom: 16px;
 
   font-family: Roboto;
@@ -44,36 +44,36 @@ import{s as n,a as e,j as t,N as I,r as m,g as k,h as T,k as j}from"./index-51cb
     display: flex;
     justify-content: center;
   }
-`,F=n.ul`
+`,N=n.ul`
   width: 312px;
   @media screen and (min-width: 768px) {
     margin: 0 auto;
     width: 412px;
   }
-`,o=n.li`
+`,r=n.li`
   /* height: 64px; */
 
   padding: 9px 0 12px 16px;
-`,r=n.p`
+`,a=n.p`
   font-family: Roboto;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.15px;
-`,a=n.p`
+`,s=n.p`
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   letter-spacing: 0.25px;
   color: rgba(110, 121, 140, 1);
-`,g=n.div`
+`,f=n.div`
   width: 312px;
   margin: 0 auto;
   @media screen and (min-width: 768px) {
     width: 412px;
   }
-`,N=({name:c,status:d,species:p,type:l,gender:x,image:s,origin:h})=>e(L,{children:[e(g,{children:[t(B,{src:s}),t(R,{children:c})]}),e(g,{children:[t(C,{children:"Information"}),e(F,{children:[e(o,{children:[t(r,{children:"Gender"}),t(a,{children:x})]}),e(o,{children:[t(r,{children:"Status"}),t(a,{children:d})]}),e(o,{children:[t(r,{children:"Specie"}),t(a,{children:p})]}),e(o,{children:[t(r,{children:"Origin"}),t(a,{children:h})]}),e(o,{children:[t(r,{children:"Type"}),t(a,{children:l.length===0?"Information are absent ":l})]})]})]})]}),S=n(I)`
+`,u=({name:c,status:l,species:p,type:x,gender:g,image:h,origin:d})=>e(R,{children:[e(f,{children:[t(C,{src:h}),t(E,{children:c})]}),e(f,{children:[t(F,{children:"Information"}),e(N,{children:[e(r,{children:[t(a,{children:"Gender"}),t(s,{children:g})]}),e(r,{children:[t(a,{children:"Status"}),t(s,{children:l})]}),e(r,{children:[t(a,{children:"Specie"}),t(s,{children:p})]}),e(r,{children:[t(a,{children:"Origin"}),t(s,{children:d})]}),e(r,{children:[t(a,{children:"Type"}),t(s,{children:x.length===0?"Information are absent ":x})]})]})]})]});u.propTypes={name:i.string,status:i.string,species:i.string,type:i.string,gender:i.string,image:i.string,origin:i.string};const S=n(T)`
   position: absolute;
   left: 50px;
   top: 81px;
@@ -90,10 +90,10 @@ import{s as n,a as e,j as t,N as I,r as m,g as k,h as T,k as j}from"./index-51cb
     width: 24px;
     height: 24px;
   }
-`,E=n.p`
+`,G=n.p`
   margin-left: 8px;
   font-size: 18px;
   line-height: 21.04px;
   font-weight: 700;
   font-family: Karla;
-`,W=()=>{var s;const[c,d]=m.useState(null),{characterId:p}=k(),x=((s=T().state)==null?void 0:s.from)??"/";if(m.useEffect(()=>{(async()=>{try{const i=await z(p);d(i.data)}catch(i){console.log(i)}})()},[p]),c){const{name:h,status:i,species:f,type:u,gender:w,image:b,origin:y}=c;return e(j,{children:[e(S,{to:x,type:"button",children:[t(v,{}),t(E,{children:"Go Back"})]}),t(N,{name:h,status:i,species:f,type:u,gender:w,image:b,origin:y.name})]})}};export{W as default};
+`,D=()=>{var h;const[c,l]=m.useState(null),{characterId:p}=j(),g=((h=v().state)==null?void 0:h.from)??"/";if(m.useEffect(()=>{(async()=>{try{const o=await B(p);l(o.data)}catch(o){console.log(o)}})()},[p]),c){const{name:d,status:o,species:w,type:y,gender:b,image:I,origin:k}=c;return e(z,{children:[e(S,{to:g,type:"button",children:[t(L,{}),t(G,{children:"Go Back"})]}),t(u,{name:d,status:o,species:w,type:y,gender:b,image:I,origin:k.name})]})}};export{D as default};
