@@ -6,6 +6,9 @@ import { fetchCharacters } from "../../API/api";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import PaginationButtons from "../../components/Pagination/Pagination";
+import { InfoBanner } from "../../components/InfoBaner/InfoBaner";
+// import { ToastContainer } from "react-toastify";
+
 const HomePage = () => {
   const [characterList, setCharacterList] = useState([]);
   const [filteredChar, setFilteredChar] = useState([]);
@@ -54,6 +57,8 @@ const HomePage = () => {
       <Input currentPage={page} />
       {!query ? (
         <CardList characterList={characterList} />
+      ) : filteredChar.length === 0 ? (
+        <InfoBanner />
       ) : (
         <CardList characterList={filteredChar} />
       )}
@@ -62,6 +67,7 @@ const HomePage = () => {
         page={page}
         handleClick={handleClickPagination}
       />
+      {/* <ToastContainer /> */}
     </MainContainer>
   );
 };

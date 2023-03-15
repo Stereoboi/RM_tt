@@ -34,3 +34,8 @@ export const NavWrapper = styled.nav`
   justify-content: space-between;
   padding: 8px 16px;
 `;
+
+export const LinkWrappers = styled.div`
+  display: flex;
+  align-items: center;
+`;

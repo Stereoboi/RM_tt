@@ -15,6 +15,7 @@ export const CardItem = styled.li`
   &:hover,
   &:focus {
     svg {
+      fill: rgb(18, 110, 33);
       transition: opacity 0.3s ease-in-out;
       opacity: 1;
     }
@@ -75,13 +76,26 @@ export const CardLink = styled(NavLink)`
 export const AddBtn = styled.button`
   position: absolute;
   background-color: transparent;
-
+  bottom: 0;
+  right: 0;
   svg {
-    fill: ${(props) => {
+    /* fill: ${(props) => {
       if (props.isAdded) {
-        return `red`;
+        console.log("asd");
+        return "red";
       }
-    }};
+    }}; */
+
+    width: 23px;
+    height: 23px;
+  }
+`;
+export const RemoveBtn = styled.button`
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  right: 0;
+  svg {
     width: 23px;
     height: 23px;
   }

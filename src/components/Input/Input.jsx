@@ -9,7 +9,7 @@ export const Input = ({ currentPage }) => {
   const page = searchParams.get("page") ?? "";
 
   const updateQueryString = (query) => {
-    const nextParams = query !== "" ? { query, page } : {};
+    const nextParams = query.trim() !== "" ? { query, page } : {};
 
     setSearchParams(nextParams);
   };

@@ -5,7 +5,7 @@ export const AuthWrapper = styled.div`
   margin-top: 150px;
   font-weight: 700;
   border-radius: 4px;
-  box-shadow: 0px 5px 14px 2px rgb(0 0 0 / 55%);
+  box-shadow: 0px 2px 14px 3px rgba(62, 163, 74, 1);
   margin-left: auto;
   margin-right: auto;
   @media screen and (max-width: 515px) {
@@ -67,7 +67,7 @@ export const AuthButton = styled.button`
   &:focus {
     cursor: pointer;
     ${"" /* transform: scale(1.05) translateY(-5px); */}
-    box-shadow: 0px 5px 14px 2px rgba(0, 0, 0, 0.55);
+    box-shadow: 0px 2px 14px 3px rgba(62, 163, 74, 1);
   }
 `;
 export const Wrapper = styled.div`

@@ -3,10 +3,12 @@ import { lazy, useEffect } from "react";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
 import { RestrictedRoute } from "./components/Routs/RestrictedRout";
 import { PrivateRoute } from "./components/Routs/PrivateRout";
+
 const Home = lazy(() => import("./pages/Home/HomePage"));
 const Auth = lazy(() => import("./pages/Auth/AuthPage"));
 const Info = lazy(() => import("./pages/Info/InfoPage"));
 const Collection = lazy(() => import("./pages/Collection/CollectionPage"));
+
 function App() {
   return (
     <Routes>
